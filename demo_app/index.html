@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Member Services Console</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background: #f3f6fb;
+        margin: 0;
+        padding: 32px;
+        color: #1a2230;
+      }
+      .container {
+        max-width: 820px;
+        margin: 0 auto;
+        background: white;
+        border-radius: 18px;
+        box-shadow: 0 15px 35px rgba(39, 54, 87, 0.1);
+        padding: 32px;
+      }
+      h1 {
+        margin-bottom: 10px;
+      }
+      .search-row {
+        display: flex;
+        gap: 12px;
+        margin-top: 20px;
+      }
+      input {
+        flex: 1;
+        padding: 14px 16px;
+        font-size: 1rem;
+        border: 1px solid #ccd6ea;
+        border-radius: 10px;
+      }
+      button {
+        border: none;
+        background: #1f6feb;
+        color: white;
+        border-radius: 10px;
+        padding: 14px 24px;
+        font-size: 1rem;
+        cursor: pointer;
+      }
+      .result-box {
+        margin-top: 28px;
+        background: #f7fafe;
+        border: 1px solid #dfe9f7;
+        border-radius: 12px;
+        padding: 20px;
+      }
+      .meta {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(180px, 1fr));
+        gap: 12px;
+        margin-top: 18px;
+      }
+      .meta-item {
+        background: white;
+        border: 1px solid #e3ebf8;
+        border-radius: 10px;
+        padding: 12px;
+      }
+      .label {
+        font-size: 0.75rem;
+        color: #5b6478;
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+        margin-bottom: 8px;
+      }
+      .value {
+        font-size: 1.1rem;
+        font-weight: 700;
+      }
+      .status badge {
+        display: inline-block;
+      }
+      .status-active {
+        color: #0f7a4b;
+        background: #dff7ea;
+        padding: 6px 10px;
+        border-radius: 999px;
+      }
+      .status-closed {
+        color: #883a0c;
+        background: #ffe7d9;
+        padding: 6px 10px;
+        border-radius: 999px;
+      }
+      .empty {
+        color: #5b6478;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Member Services Console</h1>
+      <p>Search for a member account and confirm their current status.</p>
+
+      <div class="search-row">
+        <input id="member-id" type="text" placeholder="Enter member ID (e.g. 10021)" />
+        <button id="search-button">Search member</button>
+      </div>
+
+      <div class="result-box" id="member-result">
+        <div class="empty">No member loaded yet.</div>
+      </div>
+    </div>
+
+    <script src="./app.js"></script>
+  </body>
+</html>
